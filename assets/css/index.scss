@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+:root {
+    --color-red: hsl(14, 86%, 42%);
+    --color-Green: hsl(159, 69%, 38%);
+    --color-rose-50: hsl(20, 50%, 98%);
+    --color-rose-100: hsl(13, 31%, 94%);
+    --color-rose-300: hsl(14, 25%, 72%);
+    --color-rose-400: hsl(7, 20%, 60%);
+    --color-rose-500: hsl(12, 20%, 44%);
+    --color-rose-900: hsl(14, 65%, 9%);
+    --font-red-hat-text: "Red Hat Text", sans-serif;
+}
+
+#root{
+    font-family: var(--font-red-hat-text);
+}
+
+
+.fade-in-top{-webkit-animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-top .6s cubic-bezier(.39,.575,.565,1.000) both}
+
+@-webkit-keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-top{0%{-webkit-transform:translateY(-50px);transform:translateY(-50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+.fade-in-bottom{-webkit-animation:fade-in-bottom .6s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in-bottom .6s cubic-bezier(.39,.575,.565,1.000) both}
+
+
+@-webkit-keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-bottom{0%{-webkit-transform:translateY(50px);transform:translateY(50px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+.order-confirmed{
+    animation: slideupFade 0.4s ease-out forwards;
+}
+
+@keyframes slideupFade{
+0%{
+    transform: translateY(200px) scale(0.95);
+    opacity: 0;
+}
+100%{
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+}
+
+
+
+.fadeInUp-card {
+    opacity: 0;
+   // animation-name: fadeInup_Cards;
+    //animation-duration: .5s;
+    //animation-fill-mode: forwards;
+    //animation-timing-function: ease-out ;
+   transform: translateY(20px);
+   transition: opacity 0.5s ease-out,transform 0.5s ease-out;
+}
+
+.fadeInUp-card.show{
+  //  animation:fadeInup_Cards 0.5s ease-out forwards ;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes fadeInup_Cards{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
