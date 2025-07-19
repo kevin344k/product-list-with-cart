@@ -17,7 +17,7 @@ function App() {
    
 
 
-         fetch("/data.json")
+         fetch("./data.json")
             .then(res => {
                 if (!res.ok) { throw new Error("Error al cargar los datos") }
                 return res.json()
